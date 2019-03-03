@@ -39,7 +39,7 @@ Fabric_Client.newDefaultKeyValueStore({ path: store_path
     	verify: false
     };
     // be sure to change the http to https when the CA is running TLS enabled
-    fabric_ca_client = new Fabric_CA_Client('http://test-pc3:7054', tlsOptions , 'ca.example.com', crypto_suite);
+    fabric_ca_client = new Fabric_CA_Client('org1의 ca주소', tlsOptions , 'org1 ca의 aliases된 network에서의 이름', crypto_suite);
 
     // first check to see if the admin is already enrolled
     return fabric_client.getUserContext('admin', true);
